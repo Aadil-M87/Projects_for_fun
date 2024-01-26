@@ -3,7 +3,7 @@ from googleapiclient.discovery import build
 from datetime import timedelta
 from googleapiclient.errors import HttpError
 
-api_key = "AIzaSyABkJtC1toPoeapbXsTQOsRDOpcPbGEkaA"
+api_key = "Enter_your_API_key"
 try:
     youtube = build("youtube", "v3", developerKey=api_key)
     nextPageToken = None
@@ -16,7 +16,7 @@ try:
     while True:
         pl_request = youtube.playlistItems().list(
             part="contentDetails",
-            playlistId='PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU',
+            playlistId='Enter_playlist_id',
             maxResults=50,
             pageToken=nextPageToken
 
